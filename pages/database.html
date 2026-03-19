@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Database & SQL — DevPath</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.db2{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin:2rem 0}
+.dbcard{background:var(--bg3);border:1px solid var(--b1);border-radius:14px;padding:1.8rem;transition:all .3s}
+.dbcard:hover{border-color:var(--b2);transform:translateY(-4px)}.dbcard h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
+.norm{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.nc{background:var(--bg3);border:1px solid var(--b1);border-radius:12px;padding:1.5rem;text-align:center;transition:all .3s}
+.nc:hover{border-color:var(--b2);transform:translateY(-4px)}
+.nn{font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;color:var(--purple);display:block;margin-bottom:.4rem}
+.nt{font-weight:700;font-size:.87rem;color:var(--t1);margin-bottom:.3rem}.nd{font-size:.76rem;color:var(--t2);line-height:1.6}
+@media(max-width:768px){.db2,.norm{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="sprog"></div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><div class="logo-dot"></div>DevPath</a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="frontend.html" data-p="frontend">Frontend</a></li>
+    <li><a href="backend.html" data-p="backend">Backend</a></li>
+    <li><a href="database.html" data-p="database">Database</a></li>
+    <li><a href="devops.html" data-p="devops">DevOps</a></li>
+    <li><a href="mobile.html" data-p="mobile">Mobile</a></li>
+    <li><a href="tools.html" data-p="tools">Tools</a></li>
+    <li><a href="projects.html" data-p="projects">Projects</a></li>
+    <li><a href="resources.html" class="ncta" data-p="resources">Resources</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="pw">
+  <div class="phero">
+    <div class="phero-bg">
+      <div class="phero-grid"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(159,122,234,.06),transparent);pointer-events:none"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2">
+      <div class="bc"><a href="../index.html">Home</a> &nbsp;/&nbsp; <span>Database & SQL</span></div>
+      <div class="ibox-p ibox">🛢️</div>
+      <h1 class="ph1" style="color:var(--purple)">Database & SQL</h1>
+      <p style="color:var(--t2);max-width:520px;font-size:1rem;line-height:1.85;margin-top:.8rem;animation:fup .7s .15s var(--ease) both">Master relational and non-relational databases. SQL, NoSQL, data modelling, indexing, and performance optimisation.</p>
+    </div>
+  </div>
+
+  <section class="section">
+  <div class="container">
+
+    <div class="tags aos" style="margin-bottom:2.5rem">
+      <span class="tag tp">PostgreSQL</span><span class="tag tg">MongoDB</span><span class="tag tc">MySQL</span>
+      <span class="tag to">Redis</span><span class="tag tpk">Prisma ORM</span><span class="tag tp">SQL</span>
+    </div>
+
+    <h2 class="stitle aos" style="margin-bottom:1.5rem">SQL vs <span>NoSQL</span></h2>
+    <div class="db2 aos">
+      <div class="dbcard" style="border-left:3px solid var(--purple)"><div style="font-size:2rem;margin-bottom:.7rem">🗄️</div><h3 style="color:var(--purple)">SQL (Relational)</h3><p style="font-size:.83rem;color:var(--t2);line-height:1.7">Structured data with defined schemas. ACID transactions, complex JOINs. Best for financial data, user records, and structured business logic.</p><div class="tags" style="margin-top:.8rem"><span class="tag tp">PostgreSQL</span><span class="tag tc">MySQL</span><span class="tag to">SQLite</span></div></div>
+      <div class="dbcard" style="border-left:3px solid var(--green)"><div style="font-size:2rem;margin-bottom:.7rem">📄</div><h3 style="color:var(--green)">NoSQL (Non-Relational)</h3><p style="font-size:.83rem;color:var(--t2);line-height:1.7">Flexible schemas, horizontal scaling, high availability. Document, key-value, graph stores. Best for unstructured data and rapid iteration.</p><div class="tags" style="margin-top:.8rem"><span class="tag tg">MongoDB</span><span class="tag to">Redis</span><span class="tag tc">Cassandra</span></div></div>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.3rem">SQL in <span>Practice</span></h2>
+    <div class="code-blk aos">
+      <div class="code-hdr"><span class="code-lang">PostgreSQL</span><button class="copy-btn">Copy</button></div>
+      <code><span class="cm">-- Create a normalised users table</span>
+<span class="kw">CREATE TABLE</span> users (
+  id         <span class="kw">SERIAL PRIMARY KEY</span>,
+  email      <span class="kw">VARCHAR</span>(255) <span class="kw">UNIQUE NOT NULL</span>,
+  name       <span class="kw">VARCHAR</span>(100) <span class="kw">NOT NULL</span>,
+  created_at <span class="kw">TIMESTAMP DEFAULT</span> now()
+);
+
+<span class="cm">-- Index for fast email lookups</span>
+<span class="kw">CREATE INDEX</span> idx_users_email <span class="kw">ON</span> users(email);
+
+<span class="cm">-- JOIN with aggregation</span>
+<span class="kw">SELECT</span> u.name, <span class="kw">COUNT</span>(o.id) <span class="kw">AS</span> orders, <span class="kw">SUM</span>(o.amount) <span class="kw">AS</span> revenue
+<span class="kw">FROM</span> users u
+<span class="kw">LEFT JOIN</span> orders o <span class="kw">ON</span> u.id = o.user_id
+<span class="kw">WHERE</span> o.created_at &gt; <span class="str">'2024-01-01'</span>
+<span class="kw">GROUP BY</span> u.id
+<span class="kw">ORDER BY</span> revenue <span class="kw">DESC LIMIT</span> 10;</code>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.5rem">Database <span>Normalisation</span></h2>
+    <div class="norm aos">
+      <div class="nc"><span class="nn">1NF</span><div class="nt">First Normal Form</div><div class="nd">Eliminate duplicate columns. Each cell holds atomic values. Every row is unique.</div></div>
+      <div class="nc"><span class="nn">2NF</span><div class="nt">Second Normal Form</div><div class="nd">Meet 1NF. Remove partial dependencies — every non-key attribute depends on the whole primary key.</div></div>
+      <div class="nc"><span class="nn">3NF</span><div class="nt">Third Normal Form</div><div class="nd">Meet 2NF. Remove transitive dependencies — non-key fields must not depend on other non-key fields.</div></div>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.5rem">Skill <span>Coverage</span></h2>
+    <div class="pbars aos">
+      <div class="pb-wrap"><div class="pb-label"><span>SQL Queries</span><span>92%</span></div><div class="pb-track"><div class="pb-fill" data-w="92"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>PostgreSQL</span><span>85%</span></div><div class="pb-track"><div class="pb-fill" data-w="85"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>MongoDB</span><span>80%</span></div><div class="pb-track"><div class="pb-fill" data-w="80"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Normalisation</span><span>88%</span></div><div class="pb-track"><div class="pb-fill" data-w="88"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Redis Caching</span><span>72%</span></div><div class="pb-track"><div class="pb-fill" data-w="72"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>ORM (Prisma)</span><span>78%</span></div><div class="pb-track"><div class="pb-fill" data-w="78"></div></div></div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-btm">
+      <p>© 2024 DevPath &mdash; CE College Project</p>
+      <div class="pnav">
+        <a href="backend.html">&larr; Backend</a>
+        <a href="devops.html" class="next">DevOps &rarr;</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources & Links — DevPath</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="sprog"></div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><div class="logo-dot"></div>DevPath</a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="frontend.html" data-p="frontend">Frontend</a></li>
+    <li><a href="backend.html" data-p="backend">Backend</a></li>
+    <li><a href="database.html" data-p="database">Database</a></li>
+    <li><a href="devops.html" data-p="devops">DevOps</a></li>
+    <li><a href="mobile.html" data-p="mobile">Mobile</a></li>
+    <li><a href="tools.html" data-p="tools">Tools</a></li>
+    <li><a href="projects.html" data-p="projects">Projects</a></li>
+    <li><a href="resources.html" class="ncta" data-p="resources">Resources</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="pw">
+  <div class="phero">
+    <div class="phero-bg">
+      <div class="phero-grid"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(159,122,234,.06),transparent);pointer-events:none"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2">
+      <div class="bc"><a href="../index.html">Home</a> &nbsp;/&nbsp; <span>Resources & Links</span></div>
+      <div class="ibox-p ibox">📚</div>
+      <h1 class="ph1" style="color:var(--purple)">Resources & Links</h1>
+      <p style="color:var(--t2);max-width:520px;font-size:1rem;line-height:1.85;margin-top:.8rem;animation:fup .7s .15s var(--ease) both">200+ handpicked, free resources — courses, docs, YouTube channels, books, and communities. All in one place.</p>
+    </div>
+  </div>
+
+  <section class="section">
+  <div class="container">
+
+    <div class="srch aos">
+      <input type="text" id="rsearch" placeholder="Search resources...">
+      <button>🔍</button>
+    </div>
+
+    <div class="res-sec aos">
+      <h2><span>🎓</span> Free Courses</h2>
+      <div class="res-g">
+        <a class="ri searchable" href="https://www.theodinproject.com" target="_blank"><div class="ri-icon" style="background:rgba(0,229,255,.1)">📹</div><div><span class="ri-name">The Odin Project</span><span class="ri-desc">Full-stack web dev — completely free curriculum</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://www.freecodecamp.org" target="_blank"><div class="ri-icon" style="background:rgba(0,255,136,.1)">🟢</div><div><span class="ri-name">freeCodeCamp</span><span class="ri-desc">Certifications in HTML, JS, React, Node, Python</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://cs50.harvard.edu" target="_blank"><div class="ri-icon" style="background:rgba(255,107,53,.1)">🎯</div><div><span class="ri-name">CS50 — Harvard</span><span class="ri-desc">World-class intro to computer science</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://ocw.mit.edu" target="_blank"><div class="ri-icon" style="background:rgba(159,122,234,.12)">📘</div><div><span class="ri-name">MIT OpenCourseWare</span><span class="ri-desc">Algorithms, systems, web dev — MIT quality</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://scrimba.com" target="_blank"><div class="ri-icon" style="background:rgba(0,229,255,.1)">⚡</div><div><span class="ri-name">Scrimba</span><span class="ri-desc">Interactive coding — learn by doing in browser</span></div><span class="rtag">Free Tier</span></a>
+        <a class="ri searchable" href="https://web.dev" target="_blank"><div class="ri-icon" style="background:rgba(0,255,136,.1)">🌐</div><div><span class="ri-name">web.dev by Google</span><span class="ri-desc">Modern web development guides and best practices</span></div><span class="rtag">Free</span></a>
+      </div>
+    </div>
+
+    <div class="res-sec aos">
+      <h2><span>📖</span> Official Documentation</h2>
+      <div class="res-g">
+        <a class="ri searchable" href="https://developer.mozilla.org" target="_blank"><div class="ri-icon" style="background:rgba(255,107,53,.1)">🟠</div><div><span class="ri-name">MDN Web Docs</span><span class="ri-desc">The definitive HTML, CSS &amp; JavaScript reference</span></div><span class="rtag">Docs</span></a>
+        <a class="ri searchable" href="https://react.dev" target="_blank"><div class="ri-icon" style="background:rgba(0,229,255,.1)">⚛️</div><div><span class="ri-name">React Docs</span><span class="ri-desc">Official React documentation with interactive examples</span></div><span class="rtag">Docs</span></a>
+        <a class="ri searchable" href="https://nodejs.org/docs" target="_blank"><div class="ri-icon" style="background:rgba(0,255,136,.1)">🟢</div><div><span class="ri-name">Node.js Docs</span><span class="ri-desc">Complete Node.js API reference and guides</span></div><span class="rtag">Docs</span></a>
+        <a class="ri searchable" href="https://www.postgresql.org/docs" target="_blank"><div class="ri-icon" style="background:rgba(159,122,234,.12)">🐘</div><div><span class="ri-name">PostgreSQL Docs</span><span class="ri-desc">Comprehensive PostgreSQL reference manual</span></div><span class="rtag">Docs</span></a>
+        <a class="ri searchable" href="https://docs.docker.com" target="_blank"><div class="ri-icon" style="background:rgba(0,229,255,.1)">🐋</div><div><span class="ri-name">Docker Docs</span><span class="ri-desc">Official Docker and container orchestration docs</span></div><span class="rtag">Docs</span></a>
+        <a class="ri searchable" href="https://vuejs.org/guide" target="_blank"><div class="ri-icon" style="background:rgba(0,255,136,.1)">🌿</div><div><span class="ri-name">Vue.js 3 Guide</span><span class="ri-desc">Complete Vue 3 and Composition API reference</span></div><span class="rtag">Docs</span></a>
+      </div>
+    </div>
+
+    <div class="res-sec aos">
+      <h2><span>📺</span> YouTube Channels</h2>
+      <div class="res-g">
+        <a class="ri searchable" href="https://youtube.com/@TraversyMedia" target="_blank"><div class="ri-icon" style="background:rgba(255,0,0,.1)">▶️</div><div><span class="ri-name">Traversy Media</span><span class="ri-desc">Crash courses for every web technology</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://youtube.com/@Fireship" target="_blank"><div class="ri-icon" style="background:rgba(0,229,255,.1)">🔥</div><div><span class="ri-name">Fireship</span><span class="ri-desc">Fast-paced, high-quality dev content and news</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://youtube.com/@KevinPowell" target="_blank"><div class="ri-icon" style="background:rgba(0,255,136,.1)">🎨</div><div><span class="ri-name">Kevin Powell</span><span class="ri-desc">The best CSS-focused channel on YouTube</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://youtube.com/@TheNetNinja" target="_blank"><div class="ri-icon" style="background:rgba(159,122,234,.12)">🥷</div><div><span class="ri-name">The Net Ninja</span><span class="ri-desc">Deep dives into React, Node.js, Vue, and more</span></div><span class="rtag">Free</span></a>
+      </div>
+    </div>
+
+    <div class="res-sec aos">
+      <h2><span>💪</span> Practice Platforms</h2>
+      <div class="res-g">
+        <a class="ri searchable" href="https://leetcode.com" target="_blank"><div class="ri-icon" style="background:rgba(255,165,0,.1)">⚡</div><div><span class="ri-name">LeetCode</span><span class="ri-desc">DSA practice — essential for coding interviews</span></div><span class="rtag">Free Tier</span></a>
+        <a class="ri searchable" href="https://www.hackerrank.com" target="_blank"><div class="ri-icon" style="background:rgba(0,229,255,.1)">🏆</div><div><span class="ri-name">HackerRank</span><span class="ri-desc">Coding challenges and certification badges</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://cssbattle.dev" target="_blank"><div class="ri-icon" style="background:rgba(0,255,136,.1)">🎮</div><div><span class="ri-name">CSS Battle</span><span class="ri-desc">Fun CSS challenges to sharpen styling skills</span></div><span class="rtag">Free</span></a>
+        <a class="ri searchable" href="https://www.frontendmentor.io" target="_blank"><div class="ri-icon" style="background:rgba(255,0,128,.1)">🎯</div><div><span class="ri-name">Frontend Mentor</span><span class="ri-desc">Real-world projects with professional designs</span></div><span class="rtag">Free Tier</span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-btm">
+      <p>© 2024 DevPath &mdash; CE College Project</p>
+      <div class="pnav">
+        <a href="projects.html">&larr; Projects</a>
+        <a href="../index.html" class="next">Home &rarr;</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

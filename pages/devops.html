@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps & Cloud — DevPath</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.pipeline{display:flex;align-items:center;overflow-x:auto;padding-bottom:1rem;margin:2rem 0;gap:0}
+.ps{background:var(--bg3);border:1px solid var(--b1);border-radius:10px;padding:1.1rem 1.4rem;text-align:center;flex-shrink:0;min-width:125px;transition:all .3s}
+.ps:hover{border-color:var(--b2);transform:translateY(-4px)}.ps .pi{font-size:1.5rem;display:block;margin-bottom:.4rem}.ps .pl{font-family:'JetBrains Mono',monospace;font-size:.67rem;color:var(--t2)}
+.pa{color:var(--orange);font-size:1.3rem;flex-shrink:0;padding:0 .4rem;align-self:center}
+.cloud-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:2rem 0}
+.cc{background:var(--bg3);border:1px solid var(--b1);border-radius:12px;padding:1.5rem;transition:all .3s}
+.cc:hover{border-color:var(--b2);transform:translateY(-4px)}.cc h3{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.8rem}
+.cc ul{list-style:none}.cc ul li{font-size:.79rem;color:var(--t2);padding:.3rem 0;border-bottom:1px solid var(--b1)}.cc ul li:last-child{border:none}.cc ul li::before{content:"▸ ";color:var(--orange)}
+@media(max-width:768px){.cloud-g{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="sprog"></div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><div class="logo-dot"></div>DevPath</a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="frontend.html" data-p="frontend">Frontend</a></li>
+    <li><a href="backend.html" data-p="backend">Backend</a></li>
+    <li><a href="database.html" data-p="database">Database</a></li>
+    <li><a href="devops.html" data-p="devops">DevOps</a></li>
+    <li><a href="mobile.html" data-p="mobile">Mobile</a></li>
+    <li><a href="tools.html" data-p="tools">Tools</a></li>
+    <li><a href="projects.html" data-p="projects">Projects</a></li>
+    <li><a href="resources.html" class="ncta" data-p="resources">Resources</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="pw">
+  <div class="phero">
+    <div class="phero-bg">
+      <div class="phero-grid"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(255,107,53,.06),transparent);pointer-events:none"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2">
+      <div class="bc"><a href="../index.html">Home</a> &nbsp;/&nbsp; <span>DevOps & Cloud</span></div>
+      <div class="ibox-o ibox">🐋</div>
+      <h1 class="ph1" style="color:var(--orange)">DevOps & Cloud</h1>
+      <p style="color:var(--t2);max-width:520px;font-size:1rem;line-height:1.85;margin-top:.8rem;animation:fup .7s .15s var(--ease) both">Deploy, scale, and monitor applications with confidence. Docker, Kubernetes, CI/CD pipelines, and cloud platforms.</p>
+    </div>
+  </div>
+
+  <section class="section">
+  <div class="container">
+
+    <div class="tags aos" style="margin-bottom:2.5rem">
+      <span class="tag to">Docker</span><span class="tag tc">Kubernetes</span><span class="tag tg">CI/CD</span>
+      <span class="tag to">AWS</span><span class="tag tp">GitHub Actions</span><span class="tag tpk">Nginx</span><span class="tag tc">Linux</span>
+    </div>
+
+    <h2 class="stitle aos" style="margin-bottom:1rem">CI/CD <span>Pipeline</span></h2>
+    <div class="pipeline aos">
+      <div class="ps"><span class="pi">📝</span><div class="pl">Code</div></div><div class="pa">→</div>
+      <div class="ps"><span class="pi">🔧</span><div class="pl">Build</div></div><div class="pa">→</div>
+      <div class="ps"><span class="pi">🧪</span><div class="pl">Test</div></div><div class="pa">→</div>
+      <div class="ps"><span class="pi">🐋</span><div class="pl">Docker</div></div><div class="pa">→</div>
+      <div class="ps"><span class="pi">🚀</span><div class="pl">Deploy</div></div><div class="pa">→</div>
+      <div class="ps"><span class="pi">📊</span><div class="pl">Monitor</div></div>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.3rem">Docker in <span>Practice</span></h2>
+    <div class="code-blk aos" style="border-color:rgba(255,107,53,.15)">
+      <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--orange),transparent)"></div>
+      <div class="code-hdr"><span class="code-lang" style="color:var(--orange)">Dockerfile</span><button class="copy-btn">Copy</button></div>
+      <code><span class="cm"># Multi-stage build for Node.js</span>
+<span class="kw">FROM</span> <span class="str">node:20-alpine</span> <span class="kw">AS</span> builder
+<span class="kw">WORKDIR</span> /app
+<span class="kw">COPY</span> package*.json ./
+<span class="kw">RUN</span> npm ci --only=production
+
+<span class="kw">FROM</span> <span class="str">node:20-alpine</span> <span class="kw">AS</span> runner
+<span class="kw">WORKDIR</span> /app
+<span class="kw">ENV</span> NODE_ENV=production
+<span class="kw">COPY</span> --from=builder /app/node_modules ./node_modules
+<span class="kw">COPY</span> . .
+<span class="kw">EXPOSE</span> 3000
+<span class="kw">USER</span> node
+<span class="kw">CMD</span> [<span class="str">"node"</span>, <span class="str">"server.js"</span>]</code>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.5rem">Cloud <span>Platforms</span></h2>
+    <div class="cloud-g aos">
+      <div class="cc"><div style="font-size:2rem;margin-bottom:.7rem">☁️</div><h3 style="color:var(--orange)">AWS</h3><ul><li>EC2 — Virtual machines</li><li>S3 — Object storage</li><li>RDS — Managed databases</li><li>Lambda — Serverless</li><li>CloudFront — CDN</li></ul></div>
+      <div class="cc"><div style="font-size:2rem;margin-bottom:.7rem">🔵</div><h3 style="color:var(--cyan)">Azure</h3><ul><li>App Service — Web hosting</li><li>Blob Storage</li><li>Azure SQL</li><li>Azure Functions</li><li>AKS — Kubernetes</li></ul></div>
+      <div class="cc"><div style="font-size:2rem;margin-bottom:.7rem">🔴</div><h3 style="color:var(--purple)">GCP</h3><ul><li>Compute Engine</li><li>Cloud Storage</li><li>Cloud SQL</li><li>Cloud Run</li><li>GKE — Kubernetes</li></ul></div>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.5rem">Skill <span>Coverage</span></h2>
+    <div class="pbars aos">
+      <div class="pb-wrap"><div class="pb-label"><span>Linux &amp; Shell</span><span>88%</span></div><div class="pb-track"><div class="pb-fill" data-w="88"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Docker</span><span>85%</span></div><div class="pb-track"><div class="pb-fill" data-w="85"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>CI/CD Pipelines</span><span>80%</span></div><div class="pb-track"><div class="pb-fill" data-w="80"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>AWS Basics</span><span>70%</span></div><div class="pb-track"><div class="pb-fill" data-w="70"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Kubernetes</span><span>60%</span></div><div class="pb-track"><div class="pb-fill" data-w="60"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Monitoring</span><span>72%</span></div><div class="pb-track"><div class="pb-fill" data-w="72"></div></div></div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-btm">
+      <p>© 2024 DevPath &mdash; CE College Project</p>
+      <div class="pnav">
+        <a href="database.html">&larr; Database</a>
+        <a href="mobile.html" class="next">Mobile &rarr;</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

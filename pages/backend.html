@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backend Development — DevPath</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.arch{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--b1);border:1px solid var(--b1);border-radius:14px;overflow:hidden;margin:2rem 0}
+.abox{background:var(--bg3);padding:1.8rem;text-align:center;transition:background .3s;position:relative}
+.abox:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--green);font-size:1.1rem;z-index:1}
+.abox:hover{background:var(--bg3h)}.abox .ai{font-size:2rem;display:block;margin-bottom:.6rem}
+.abox .al{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--t1)}.abox .as{font-size:.73rem;color:var(--t2);margin-top:.3rem}
+.api-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:2rem 0}
+.api-card{background:var(--bg3);border:1px solid var(--b1);border-radius:12px;padding:1.5rem;transition:all .3s}
+.api-card:hover{border-color:var(--b2);transform:translateY(-4px)}.api-card .at{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:700;letter-spacing:.08em;margin-bottom:.8rem;display:block}
+.api-card ul{list-style:none}.api-card ul li{font-size:.8rem;color:var(--t2);padding:.3rem 0;border-bottom:1px solid var(--b1)}.api-card ul li:last-child{border:none}.api-card ul li::before{content:"✓ ";color:var(--green)}
+@media(max-width:768px){.arch,.api-g{grid-template-columns:1fr}.abox::after{display:none!important}}
+</style>
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="sprog"></div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><div class="logo-dot"></div>DevPath</a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="frontend.html" data-p="frontend">Frontend</a></li>
+    <li><a href="backend.html" data-p="backend">Backend</a></li>
+    <li><a href="database.html" data-p="database">Database</a></li>
+    <li><a href="devops.html" data-p="devops">DevOps</a></li>
+    <li><a href="mobile.html" data-p="mobile">Mobile</a></li>
+    <li><a href="tools.html" data-p="tools">Tools</a></li>
+    <li><a href="projects.html" data-p="projects">Projects</a></li>
+    <li><a href="resources.html" class="ncta" data-p="resources">Resources</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="pw">
+  <div class="phero">
+    <div class="phero-bg">
+      <div class="phero-grid"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(0,255,136,.06),transparent);pointer-events:none"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2">
+      <div class="bc"><a href="../index.html">Home</a> &nbsp;/&nbsp; <span>Backend Development</span></div>
+      <div class="ibox-g ibox">⚙️</div>
+      <h1 class="ph1" style="color:var(--green)">Backend Development</h1>
+      <p style="color:var(--t2);max-width:520px;font-size:1rem;line-height:1.85;margin-top:.8rem;animation:fup .7s .15s var(--ease) both">Build robust, scalable server-side applications. APIs, authentication, databases, and system architecture — all covered.</p>
+    </div>
+  </div>
+
+  <section class="section">
+  <div class="container">
+
+    <div class="tags aos" style="margin-bottom:2.5rem">
+      <span class="tag tg">Node.js</span><span class="tag tc">Express</span><span class="tag to">Python</span>
+      <span class="tag tp">Django</span><span class="tag tg">REST API</span><span class="tag tc">GraphQL</span>
+      <span class="tag tpk">JWT</span><span class="tag to">OAuth 2.0</span>
+    </div>
+
+    <h2 class="stitle aos" style="margin-bottom:1rem">Request <span>Lifecycle</span></h2>
+    <div class="arch aos">
+      <div class="abox"><span class="ai">🌐</span><div class="al">Client</div><div class="as">Browser / Mobile App</div></div>
+      <div class="abox"><span class="ai">⚙️</span><div class="al">Server / API</div><div class="as">Node.js / Express</div></div>
+      <div class="abox"><span class="ai">🛢️</span><div class="al">Database</div><div class="as">PostgreSQL / MongoDB</div></div>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.5rem">Learning <span>Roadmap</span></h2>
+    <div class="g2">
+      <div class="card aos d1"><div class="step-num" style="margin-bottom:.8rem">01</div><h3>HTTP &amp; Web Fundamentals</h3><p>Request/response cycle, status codes, headers, cookies, sessions, and HTTPS/TLS.</p><div class="tags" style="margin-top:.8rem"><span class="tag tg">HTTP/2</span><span class="tag tc">REST</span></div></div>
+      <div class="card aos d2"><div class="step-num" style="margin-bottom:.8rem">02</div><h3>Node.js &amp; Express.js</h3><p>Event loop, streams, middleware, routing, error handling, and building production APIs.</p><div class="tags" style="margin-top:.8rem"><span class="tag tg">Node.js</span><span class="tag tc">Express</span></div></div>
+      <div class="card aos d1"><div class="step-num" style="margin-bottom:.8rem">03</div><h3>Authentication &amp; Authorization</h3><p>JWT, sessions, OAuth 2.0, bcrypt, refresh tokens, role-based access control (RBAC).</p><div class="tags" style="margin-top:.8rem"><span class="tag tpk">JWT</span><span class="tag to">OAuth</span></div></div>
+      <div class="card aos d2"><div class="step-num" style="margin-bottom:.8rem">04</div><h3>API Design Principles</h3><p>RESTful design, versioning, pagination, rate limiting, Swagger/OpenAPI documentation.</p><div class="tags" style="margin-top:.8rem"><span class="tag tg">REST</span><span class="tag tc">OpenAPI</span></div></div>
+      <div class="card aos d1"><div class="step-num" style="margin-bottom:.8rem">05</div><h3>Caching Strategies</h3><p>Redis, in-memory caching, HTTP cache headers, CDN strategies, cache invalidation.</p><div class="tags" style="margin-top:.8rem"><span class="tag to">Redis</span><span class="tag tc">CDN</span></div></div>
+      <div class="card aos d2"><div class="step-num" style="margin-bottom:.8rem">06</div><h3>Microservices Architecture</h3><p>Service decomposition, message queues (Kafka, RabbitMQ), API gateways, inter-service comms.</p><div class="tags" style="margin-top:.8rem"><span class="tag tp">Kafka</span><span class="tag tpk">Microservices</span></div></div>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.5rem">API <span>Architectures</span></h2>
+    <div class="api-g aos">
+      <div class="api-card"><span class="at" style="color:var(--green)">REST API</span><ul><li>HTTP methods (GET, POST, PUT, DELETE)</li><li>Stateless communication</li><li>JSON responses</li><li>Easy to debug</li><li>Best for CRUD apps</li></ul></div>
+      <div class="api-card"><span class="at" style="color:var(--cyan)">GraphQL</span><ul><li>Single endpoint</li><li>Client controls data shape</li><li>Strongly typed schema</li><li>No over-fetching</li><li>Best for complex graphs</li></ul></div>
+      <div class="api-card"><span class="at" style="color:var(--purple)">gRPC</span><ul><li>Protocol Buffers (binary)</li><li>Very high performance</li><li>Strong typing via .proto</li><li>Bidirectional streaming</li><li>Best for microservices</li></ul></div>
+    </div>
+
+    <h2 class="stitle aos" style="margin:3rem 0 1.5rem">Skill <span>Coverage</span></h2>
+    <div class="pbars aos">
+      <div class="pb-wrap"><div class="pb-label"><span>Node.js &amp; Express</span><span>90%</span></div><div class="pb-track"><div class="pb-fill" data-w="90"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>REST API Design</span><span>95%</span></div><div class="pb-track"><div class="pb-fill" data-w="95"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Authentication JWT</span><span>85%</span></div><div class="pb-track"><div class="pb-fill" data-w="85"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>GraphQL</span><span>70%</span></div><div class="pb-track"><div class="pb-fill" data-w="70"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Microservices</span><span>65%</span></div><div class="pb-track"><div class="pb-fill" data-w="65"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Security Practices</span><span>80%</span></div><div class="pb-track"><div class="pb-fill" data-w="80"></div></div></div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-btm">
+      <p>© 2024 DevPath &mdash; CE College Project</p>
+      <div class="pnav">
+        <a href="frontend.html">&larr; Frontend</a>
+        <a href="database.html" class="next">Database &rarr;</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

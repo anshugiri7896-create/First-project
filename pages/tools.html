@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tools & IDEs — DevPath</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.tools-g{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.tc2{background:var(--bg3);border:1px solid var(--b1);border-radius:13px;padding:1.4rem;transition:all .35s var(--ease);text-align:center}
+.tc2:hover{border-color:var(--b2);transform:translateY(-5px);box-shadow:0 18px 48px rgba(0,0,0,.5)}
+.ti{font-size:2rem;margin-bottom:.7rem;display:block}.tn{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;color:var(--t1);margin-bottom:.25rem}
+.tcat{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em}.td{font-size:.76rem;color:var(--t2);margin-top:.5rem;line-height:1.6}
+.git-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.3rem}
+.gc{background:#010c18;border:1px solid rgba(0,229,255,.1);border-radius:8px;padding:.8rem 1rem}
+.gc .cmd{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--green)}.gc .desc{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--t3);margin-top:.2rem}
+@media(max-width:1024px){.tools-g{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.tools-g{grid-template-columns:repeat(2,1fr)}.git-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.tools-g{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="sprog"></div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><div class="logo-dot"></div>DevPath</a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="frontend.html" data-p="frontend">Frontend</a></li>
+    <li><a href="backend.html" data-p="backend">Backend</a></li>
+    <li><a href="database.html" data-p="database">Database</a></li>
+    <li><a href="devops.html" data-p="devops">DevOps</a></li>
+    <li><a href="mobile.html" data-p="mobile">Mobile</a></li>
+    <li><a href="tools.html" data-p="tools">Tools</a></li>
+    <li><a href="projects.html" data-p="projects">Projects</a></li>
+    <li><a href="resources.html" class="ncta" data-p="resources">Resources</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="pw">
+  <div class="phero">
+    <div class="phero-bg">
+      <div class="phero-grid"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(0,229,255,.05),transparent);pointer-events:none"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2">
+      <div class="bc"><a href="../index.html">Home</a> &nbsp;/&nbsp; <span>Tools & IDEs</span></div>
+      <div class="ibox-c ibox">🛠️</div>
+      <h1 class="ph1" style="color:var(--cyan)">Tools & IDEs</h1>
+      <p style="color:var(--t2);max-width:520px;font-size:1rem;line-height:1.85;margin-top:.8rem;animation:fup .7s .15s var(--ease) both">The right tools make you 10x more productive. Master Git, VS Code, Postman, Figma, and the full developer toolkit.</p>
+    </div>
+  </div>
+
+  <section class="section">
+  <div class="container">
+
+    <div class="filter-row aos">
+      <button class="fb act" data-f="all">All Tools</button>
+      <button class="fb" data-f="editor">Editors</button>
+      <button class="fb" data-f="vcs">Version Control</button>
+      <button class="fb" data-f="api">API Testing</button>
+      <button class="fb" data-f="design">Design</button>
+      <button class="fb" data-f="terminal">Terminal</button>
+    </div>
+
+    <div class="tools-g">
+      <div class="tc2 fi aos d1" data-cat="editor"><span class="ti">💙</span><div class="tn">VS Code</div><div class="tcat">Editor</div><div class="td">Free, extensible editor from Microsoft with IntelliSense, debugger, and terminal built in.</div></div>
+      <div class="tc2 fi aos d2" data-cat="vcs"><span class="ti">🔧</span><div class="tn">Git</div><div class="tcat">Version Control</div><div class="td">Track changes, work in branches, collaborate with others on the same codebase.</div></div>
+      <div class="tc2 fi aos d3" data-cat="vcs"><span class="ti">🐙</span><div class="tn">GitHub</div><div class="tcat">Hosting</div><div class="td">Host repos, PR reviews, Actions CI/CD pipelines, Issues, and code collaboration.</div></div>
+      <div class="tc2 fi aos d4" data-cat="api"><span class="ti">📮</span><div class="tn">Postman</div><div class="tcat">API Testing</div><div class="td">Test REST APIs, manage environments, write automated test suites, generate docs.</div></div>
+      <div class="tc2 fi aos d1" data-cat="design"><span class="ti">🎨</span><div class="tn">Figma</div><div class="tcat">Design</div><div class="td">Collaborative UI design, prototyping, design systems and handoff to developers.</div></div>
+      <div class="tc2 fi aos d2" data-cat="editor"><span class="ti">🔍</span><div class="tn">Chrome DevTools</div><div class="tcat">Browser</div><div class="td">Debug JS, inspect CSS, analyse network requests, and profile rendering performance.</div></div>
+      <div class="tc2 fi aos d3" data-cat="terminal"><span class="ti">⚫</span><div class="tn">Warp Terminal</div><div class="tcat">Terminal</div><div class="td">AI-powered terminal with splits, command autocomplete and modern UX.</div></div>
+      <div class="tc2 fi aos d4" data-cat="editor"><span class="ti">🟢</span><div class="tn">WebStorm</div><div class="tcat">Editor</div><div class="td">JetBrains IDE with deep JS/TS support, inline debugger, and smart refactoring.</div></div>
+      <div class="tc2 fi aos d1" data-cat="api"><span class="ti">⚡</span><div class="tn">Insomnia</div><div class="tcat">API Testing</div><div class="td">REST and GraphQL client with env variables, collections, and code snippet generation.</div></div>
+      <div class="tc2 fi aos d2" data-cat="terminal"><span class="ti">🐚</span><div class="tn">Zsh + Oh My Zsh</div><div class="tcat">Terminal</div><div class="td">Shell with themes, plugins, git integration, and tab auto-completion.</div></div>
+      <div class="tc2 fi aos d3" data-cat="design"><span class="ti">🖼️</span><div class="tn">Storybook</div><div class="tcat">UI Dev</div><div class="td">Develop, document, and test UI components in isolation. Build design systems.</div></div>
+      <div class="tc2 fi aos d4" data-cat="vcs"><span class="ti">🔀</span><div class="tn">GitLab</div><div class="tcat">Hosting</div><div class="td">Self-hostable alternative to GitHub with integrated CI/CD and DevOps tooling.</div></div>
+    </div>
+
+    <div class="aos" style="margin-top:3.5rem">
+      <div class="card">
+        <h3 style="font-size:1.2rem;margin-bottom:.4rem">Essential Git Commands</h3>
+        <p>Commands every developer must know by heart.</p>
+        <div class="git-grid">
+          <div class="gc"><div class="cmd">git init</div><div class="desc">Initialise new repository</div></div>
+          <div class="gc"><div class="cmd">git clone [url]</div><div class="desc">Clone a remote repository</div></div>
+          <div class="gc"><div class="cmd">git add . &amp;&amp; git commit -m "msg"</div><div class="desc">Stage all and commit</div></div>
+          <div class="gc"><div class="cmd">git checkout -b feature/name</div><div class="desc">Create and switch branch</div></div>
+          <div class="gc"><div class="cmd">git pull origin main</div><div class="desc">Pull latest changes</div></div>
+          <div class="gc"><div class="cmd">git rebase -i HEAD~3</div><div class="desc">Interactive rebase</div></div>
+          <div class="gc"><div class="cmd">git stash pop</div><div class="desc">Apply stashed changes</div></div>
+          <div class="gc"><div class="cmd">git log --oneline --graph</div><div class="desc">Visual commit history</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-btm">
+      <p>© 2024 DevPath &mdash; CE College Project</p>
+      <div class="pnav">
+        <a href="mobile.html">&larr; Mobile</a>
+        <a href="projects.html" class="next">Projects &rarr;</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

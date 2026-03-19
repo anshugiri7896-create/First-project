@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontend Development — DevPath</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.arch2{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--b1);border:1px solid var(--b1);border-radius:14px;overflow:hidden;margin:2rem 0}
+.abox{background:var(--bg3);padding:1.8rem;text-align:center;transition:background .3s;position:relative}
+.abox:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--cyan);font-size:1.1rem;z-index:1}
+.abox:hover{background:var(--bg3h)}.abox .ai{font-size:2rem;display:block;margin-bottom:.6rem}
+.abox .al{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--t1)}.abox .as{font-size:.73rem;color:var(--t2);margin-top:.3rem}
+@media(max-width:768px){.arch2{grid-template-columns:1fr}.abox::after{display:none!important}}
+</style>
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="sprog"></div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><div class="logo-dot"></div>DevPath</a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="frontend.html" data-p="frontend">Frontend</a></li>
+    <li><a href="backend.html" data-p="backend">Backend</a></li>
+    <li><a href="database.html" data-p="database">Database</a></li>
+    <li><a href="devops.html" data-p="devops">DevOps</a></li>
+    <li><a href="mobile.html" data-p="mobile">Mobile</a></li>
+    <li><a href="tools.html" data-p="tools">Tools</a></li>
+    <li><a href="projects.html" data-p="projects">Projects</a></li>
+    <li><a href="resources.html" class="ncta" data-p="resources">Resources</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="pw">
+  <div class="phero">
+    <div class="phero-bg">
+      <div class="phero-grid"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(0,229,255,.07),transparent);pointer-events:none"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2">
+      <div class="bc"><a href="../index.html">Home</a> &nbsp;/&nbsp; <span>Frontend Development</span></div>
+      <div class="ibox-c ibox">🎨</div>
+      <h1 class="ph1" style="color:var(--cyan)">Frontend Development</h1>
+      <p style="color:var(--t2);max-width:520px;font-size:1rem;line-height:1.85;margin-top:.8rem;animation:fup .7s .15s var(--ease) both">Master building beautiful, performant, accessible UIs. From HTML basics to advanced React patterns and beyond.</p>
+    </div>
+  </div>
+
+  <section class="section">
+  <div class="container">
+
+    <div class="tags aos" style="margin-bottom:2.5rem">
+      <span class="tag tc">HTML5</span><span class="tag to">CSS3</span><span class="tag tc">JavaScript</span>
+      <span class="tag tp">TypeScript</span><span class="tag tc">React</span><span class="tag tg">Vue.js</span>
+      <span class="tag tpk">Svelte</span><span class="tag to">Vite</span><span class="tag tg">Next.js</span>
+    </div>
+
+    <h2 class="stitle aos" style="margin-bottom:1.5rem">Skill <span>Coverage</span></h2>
+    <div class="pbars aos">
+      <div class="pb-wrap"><div class="pb-label"><span>HTML &amp; Semantics</span><span>95%</span></div><div class="pb-track"><div class="pb-fill" data-w="95"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>CSS3 &amp; Animations</span><span>90%</span></div><div class="pb-track"><div class="pb-fill" data-w="90"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>JavaScript ES6+</span><span>85%</span></div><div class="pb-track"><div class="pb-fill" data-w="85"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>React Ecosystem</span><span>80%</span></div><div class="pb-track"><div class="pb-fill" data-w="80"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>TypeScript</span><span>70%</span></div><div class="pb-track"><div class="pb-fill" data-w="70"></div></div></div>
+      <div class="pb-wrap"><div class="pb-label"><span>Performance &amp; A11y</span><span>75%</span></div><div class="pb-track"><div class="pb-fill" data-w="75"></div></div></div>
+    </div>
+
+    <div class="tab-group aos" style="margin-top:3rem">
+      <div class="tab-nav">
+        <button class="tb act">🏗️ Foundations</button>
+        <button class="tb">⚡ JavaScript</button>
+        <button class="tb">⚛️ Frameworks</button>
+        <button class="tb">🔧 Build Tools</button>
+        <button class="tb">🚀 Advanced</button>
+      </div>
+
+      <div class="tpanel act" style="opacity:1">
+        <div class="row-card"><div class="step-num">01</div><div><div class="rc-title">HTML5 Fundamentals</div><div class="rc-desc">Semantic elements, forms, accessibility (ARIA), SEO, meta tags. The skeleton of every web page.</div><div class="tags" style="margin-top:.6rem"><span class="tag to">HTML5</span><span class="tag tc">Semantics</span><span class="tag tg">ARIA</span></div></div><span class="badge b-beg">Beginner</span></div>
+        <div class="row-card"><div class="step-num">02</div><div><div class="rc-title">CSS3 &amp; Modern Styling</div><div class="rc-desc">Flexbox, Grid, Custom Properties, animations, transitions, media queries, and responsive design.</div><div class="tags" style="margin-top:.6rem"><span class="tag to">Flexbox</span><span class="tag tc">Grid</span><span class="tag tg">Animations</span></div></div><span class="badge b-beg">Beginner</span></div>
+        <div class="row-card"><div class="step-num">03</div><div><div class="rc-title">SASS / SCSS</div><div class="rc-desc">Variables, nesting, mixins, functions, partials. Write maintainable stylesheets at scale.</div><div class="tags" style="margin-top:.6rem"><span class="tag tpk">SASS</span><span class="tag to">SCSS</span></div></div><span class="badge b-int">Intermediate</span></div>
+        <div class="row-card"><div class="step-num">04</div><div><div class="rc-title">Responsive &amp; Mobile-First</div><div class="rc-desc">Viewport units, fluid typography, container queries, and mobile-first design principles.</div><div class="tags" style="margin-top:.6rem"><span class="tag tc">Responsive</span><span class="tag tg">Mobile-First</span></div></div><span class="badge b-beg">Beginner</span></div>
+        <div class="code-blk"><div class="code-hdr"><span class="code-lang">CSS</span><button class="copy-btn">Copy</button></div><code><span class="cm">/* auto-responsive grid */</span>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+h1 { font-size: clamp(2rem, 5vw, 4rem); }
+
+.card {
+  transition: transform .35s cubic-bezier(.16,1,.3,1);
+}
+.card:hover { transform: translateY(-6px); }</code></div>
+      </div>
+
+      <div class="tpanel">
+        <div class="row-card"><div class="step-num">01</div><div><div class="rc-title">JavaScript ES6+ Core</div><div class="rc-desc">Arrow functions, destructuring, spread/rest, template literals, modules, and classes.</div><div class="tags" style="margin-top:.6rem"><span class="tag tc">ES6+</span><span class="tag tg">Modules</span></div></div><span class="badge b-beg">Beginner</span></div>
+        <div class="row-card"><div class="step-num">02</div><div><div class="rc-title">Async JavaScript</div><div class="rc-desc">Promises, async/await, fetch API, error handling, and working with REST APIs.</div><div class="tags" style="margin-top:.6rem"><span class="tag to">Promises</span><span class="tag tc">Async/Await</span></div></div><span class="badge b-int">Intermediate</span></div>
+        <div class="row-card"><div class="step-num">03</div><div><div class="rc-title">DOM Manipulation &amp; Events</div><div class="rc-desc">Querying, traversal, event delegation, MutationObserver, IntersectionObserver.</div><div class="tags" style="margin-top:.6rem"><span class="tag tg">DOM</span><span class="tag tpk">Events</span></div></div><span class="badge b-int">Intermediate</span></div>
+        <div class="row-card"><div class="step-num">04</div><div><div class="rc-title">TypeScript</div><div class="rc-desc">Types, interfaces, generics, enums, decorators, and integrating TS into real projects.</div><div class="tags" style="margin-top:.6rem"><span class="tag tp">TypeScript</span></div></div><span class="badge b-adv">Advanced</span></div>
+      </div>
+
+      <div class="tpanel">
+        <div class="row-card"><div class="step-num">01</div><div><div class="rc-title">React.js</div><div class="rc-desc">Components, hooks (useState, useEffect, useContext, useMemo), React Router, state management, Next.js.</div><div class="tags" style="margin-top:.6rem"><span class="tag tc">React</span><span class="tag tg">Hooks</span><span class="tag to">Next.js</span></div></div><span class="badge b-int">Intermediate</span></div>
+        <div class="row-card"><div class="step-num">02</div><div><div class="rc-title">Vue.js 3</div><div class="rc-desc">Composition API, reactivity, Pinia state management, Vue Router, and Nuxt.js for SSR.</div><div class="tags" style="margin-top:.6rem"><span class="tag tg">Vue 3</span><span class="tag tc">Pinia</span></div></div><span class="badge b-int">Intermediate</span></div>
+        <div class="row-card"><div class="step-num">03</div><div><div class="rc-title">State Management</div><div class="rc-desc">Redux Toolkit, Zustand, Jotai — managing complex application state at scale.</div><div class="tags" style="margin-top:.6rem"><span class="tag tp">Redux</span><span class="tag tc">Zustand</span></div></div><span class="badge b-adv">Advanced</span></div>
+      </div>
+
+      <div class="tpanel">
+        <div class="row-card"><div class="step-num">01</div><div><div class="rc-title">Package Managers</div><div class="rc-desc">npm, yarn, pnpm — dependency management, scripts, workspaces, lock files.</div><div class="tags" style="margin-top:.6rem"><span class="tag tg">npm</span><span class="tag tc">pnpm</span></div></div><span class="badge b-beg">Beginner</span></div>
+        <div class="row-card"><div class="step-num">02</div><div><div class="rc-title">Vite &amp; Webpack</div><div class="rc-desc">Module bundling, code splitting, tree shaking, HMR, and production build optimisation.</div><div class="tags" style="margin-top:.6rem"><span class="tag to">Vite</span><span class="tag tc">Webpack</span></div></div><span class="badge b-int">Intermediate</span></div>
+        <div class="row-card"><div class="step-num">03</div><div><div class="rc-title">Testing</div><div class="rc-desc">Jest, Vitest, React Testing Library, Cypress for E2E, and writing testable frontend code.</div><div class="tags" style="margin-top:.6rem"><span class="tag tg">Jest</span><span class="tag tpk">Cypress</span></div></div><span class="badge b-adv">Advanced</span></div>
+      </div>
+
+      <div class="tpanel">
+        <div class="row-card"><div class="step-num">01</div><div><div class="rc-title">Web Performance</div><div class="rc-desc">Core Web Vitals, Lighthouse, lazy loading, image optimisation, caching strategies.</div><div class="tags" style="margin-top:.6rem"><span class="tag tg">CWV</span><span class="tag to">Lighthouse</span></div></div><span class="badge b-adv">Advanced</span></div>
+        <div class="row-card"><div class="step-num">02</div><div><div class="rc-title">Web Animations API</div><div class="rc-desc">WAAPI, GSAP, Framer Motion, scroll-driven animations, canvas and WebGL basics.</div><div class="tags" style="margin-top:.6rem"><span class="tag tc">GSAP</span><span class="tag tp">WAAPI</span></div></div><span class="badge b-adv">Advanced</span></div>
+        <div class="row-card"><div class="step-num">03</div><div><div class="rc-title">Progressive Web Apps</div><div class="rc-desc">Service workers, Web App Manifest, offline support, push notifications, installable PWAs.</div><div class="tags" style="margin-top:.6rem"><span class="tag tpk">PWA</span><span class="tag tc">Service Workers</span></div></div><span class="badge b-adv">Advanced</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-btm">
+      <p>© 2024 DevPath &mdash; CE College Project</p>
+      <div class="pnav">
+        <a href="../index.html">&larr; Home</a>
+        <a href="backend.html" class="next">Backend &rarr;</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

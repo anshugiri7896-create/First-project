@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Ideas — DevPath</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.proj-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.pj{background:var(--bg3);border:1px solid var(--b1);border-radius:14px;padding:1.6rem;transition:all .4s var(--ease);position:relative;overflow:hidden}
+.pj::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--pj-c,var(--cyan));transform:scaleX(0);transition:transform .4s var(--ease)}
+.pj:hover{border-color:var(--b2);transform:translateY(-6px);box-shadow:0 22px 55px rgba(0,0,0,.5)}.pj:hover::before{transform:scaleX(1)}
+.pdiff{font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 9px;border-radius:100px;margin-bottom:.9rem;display:inline-block}
+.pj-title{font-family:'Syne',sans-serif;font-size:.97rem;font-weight:700;color:var(--t1);margin-bottom:.4rem;letter-spacing:-.01em}
+.pj-desc{font-size:.8rem;color:var(--t2);line-height:1.7;margin-bottom:.9rem}
+.pj-stack{display:flex;flex-wrap:wrap;gap:5px}
+.sb{font-family:'JetBrains Mono',monospace;font-size:.63rem;padding:2px 7px;border-radius:4px;background:rgba(255,255,255,.04);color:var(--t3);border:1px solid var(--b1)}
+@media(max-width:1024px){.proj-g{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.proj-g{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="sprog"></div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo"><div class="logo-dot"></div>DevPath</a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="frontend.html" data-p="frontend">Frontend</a></li>
+    <li><a href="backend.html" data-p="backend">Backend</a></li>
+    <li><a href="database.html" data-p="database">Database</a></li>
+    <li><a href="devops.html" data-p="devops">DevOps</a></li>
+    <li><a href="mobile.html" data-p="mobile">Mobile</a></li>
+    <li><a href="tools.html" data-p="tools">Tools</a></li>
+    <li><a href="projects.html" data-p="projects">Projects</a></li>
+    <li><a href="resources.html" class="ncta" data-p="resources">Resources</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="pw">
+  <div class="phero">
+    <div class="phero-bg">
+      <div class="phero-grid"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(0,255,136,.05),transparent);pointer-events:none"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2">
+      <div class="bc"><a href="../index.html">Home</a> &nbsp;/&nbsp; <span>Project Ideas</span></div>
+      <div class="ibox-g ibox">🚀</div>
+      <h1 class="ph1" style="color:var(--green)">Project Ideas</h1>
+      <p style="color:var(--t2);max-width:520px;font-size:1rem;line-height:1.85;margin-top:.8rem;animation:fup .7s .15s var(--ease) both">Build a portfolio that gets you hired. 12 curated project ideas for every skill level with suggested tech stacks.</p>
+    </div>
+  </div>
+
+  <section class="section">
+  <div class="container">
+
+    <div class="filter-row aos">
+      <button class="fb act" data-f="all">All Projects</button>
+      <button class="fb" data-f="web">Web App</button>
+      <button class="fb" data-f="api">API / Backend</button>
+      <button class="fb" data-f="mobile">Mobile</button>
+      <button class="fb" data-f="fullstack">Full Stack</button>
+    </div>
+
+    <div class="proj-g">
+      <div class="pj fi aos d1" data-cat="web" style="--pj-c:var(--green)"><div class="pdiff b-beg">Beginner</div><div class="pj-title">🛒 E-Commerce UI Clone</div><p class="pj-desc">Product listing with cart, filters, search, and responsive layout.</p><div class="pj-stack"><span class="sb">HTML</span><span class="sb">CSS</span><span class="sb">JavaScript</span></div></div>
+      <div class="pj fi aos d2" data-cat="api" style="--pj-c:var(--cyan)"><div class="pdiff b-beg">Beginner</div><div class="pj-title">🌦️ Weather Dashboard</div><p class="pj-desc">Real-time weather via OpenWeatherMap API with charts and animated icons.</p><div class="pj-stack"><span class="sb">JavaScript</span><span class="sb">REST API</span><span class="sb">Chart.js</span></div></div>
+      <div class="pj fi aos d3" data-cat="web" style="--pj-c:var(--purple)"><div class="pdiff b-beg">Beginner</div><div class="pj-title">📝 Markdown Note App</div><p class="pj-desc">Live markdown preview, localStorage persistence, folders, PDF export.</p><div class="pj-stack"><span class="sb">React</span><span class="sb">localStorage</span><span class="sb">Marked.js</span></div></div>
+      <div class="pj fi aos d1" data-cat="web" style="--pj-c:var(--cyan)"><div class="pdiff b-beg">Beginner</div><div class="pj-title">⏱️ Pomodoro Timer</div><p class="pj-desc">Focus timer with session intervals, sound notifications, and productivity stats.</p><div class="pj-stack"><span class="sb">HTML</span><span class="sb">CSS</span><span class="sb">JS</span></div></div>
+      <div class="pj fi aos d2" data-cat="fullstack" style="--pj-c:var(--green)"><div class="pdiff b-int">Intermediate</div><div class="pj-title">💬 Real-Time Chat App</div><p class="pj-desc">WebSocket chat with rooms, typing indicators, read receipts, and auth.</p><div class="pj-stack"><span class="sb">React</span><span class="sb">Node.js</span><span class="sb">Socket.io</span><span class="sb">MongoDB</span></div></div>
+      <div class="pj fi aos d3" data-cat="fullstack" style="--pj-c:var(--orange)"><div class="pdiff b-int">Intermediate</div><div class="pj-title">📊 Analytics Dashboard</div><p class="pj-desc">Interactive charts, data tables, dark mode, date range filters, CSV export.</p><div class="pj-stack"><span class="sb">Next.js</span><span class="sb">Recharts</span><span class="sb">Prisma</span><span class="sb">PostgreSQL</span></div></div>
+      <div class="pj fi aos d1" data-cat="api" style="--pj-c:var(--cyan)"><div class="pdiff b-int">Intermediate</div><div class="pj-title">🔐 Auth Microservice</div><p class="pj-desc">JWT, refresh tokens, OAuth Google/GitHub, rate limiting, 2FA support.</p><div class="pj-stack"><span class="sb">Node.js</span><span class="sb">Express</span><span class="sb">JWT</span><span class="sb">Redis</span></div></div>
+      <div class="pj fi aos d2" data-cat="mobile" style="--pj-c:var(--pink)"><div class="pdiff b-int">Intermediate</div><div class="pj-title">💪 Fitness Tracker App</div><p class="pj-desc">Workout logging, progress charts, exercise library, and push reminders.</p><div class="pj-stack"><span class="sb">React Native</span><span class="sb">Expo</span><span class="sb">SQLite</span></div></div>
+      <div class="pj fi aos d3" data-cat="fullstack" style="--pj-c:var(--purple)"><div class="pdiff b-adv">Advanced</div><div class="pj-title">🎥 Video Streaming Platform</div><p class="pj-desc">Video upload, transcoding, HLS streaming, subscriptions, and comments.</p><div class="pj-stack"><span class="sb">Next.js</span><span class="sb">FFmpeg</span><span class="sb">AWS S3</span><span class="sb">MongoDB</span></div></div>
+      <div class="pj fi aos d1" data-cat="fullstack" style="--pj-c:var(--green)"><div class="pdiff b-adv">Advanced</div><div class="pj-title">🛍️ Full E-Commerce Platform</div><p class="pj-desc">Product management, cart, Stripe payments, order tracking, admin panel.</p><div class="pj-stack"><span class="sb">Next.js</span><span class="sb">Stripe</span><span class="sb">PostgreSQL</span><span class="sb">Prisma</span></div></div>
+      <div class="pj fi aos d2" data-cat="api" style="--pj-c:var(--orange)"><div class="pdiff b-adv">Advanced</div><div class="pj-title">🤖 AI SaaS Dashboard</div><p class="pj-desc">OpenAI-powered SaaS with usage billing, workspaces, and analytics.</p><div class="pj-stack"><span class="sb">Next.js</span><span class="sb">OpenAI</span><span class="sb">Stripe</span><span class="sb">Supabase</span></div></div>
+      <div class="pj fi aos d3" data-cat="mobile" style="--pj-c:var(--cyan)"><div class="pdiff b-adv">Advanced</div><div class="pj-title">🗺️ Location-Based Social App</div><p class="pj-desc">Geo-fenced events, real-time locations, map-based discovery feed.</p><div class="pj-stack"><span class="sb">React Native</span><span class="sb">MapBox</span><span class="sb">Firebase</span></div></div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-btm">
+      <p>© 2024 DevPath &mdash; CE College Project</p>
+      <div class="pnav">
+        <a href="tools.html">&larr; Tools</a>
+        <a href="resources.html" class="next">Resources &rarr;</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

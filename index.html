@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevPath — Web & App Development Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="sprog"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-dot"></div>
+    DevPath
+  </a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="index.html" class="act">Home</a></li>
+    <li><a href="pages/frontend.html">Frontend</a></li>
+    <li><a href="pages/backend.html">Backend</a></li>
+    <li><a href="pages/database.html">Database</a></li>
+    <li><a href="pages/devops.html">DevOps</a></li>
+    <li><a href="pages/mobile.html">Mobile</a></li>
+    <li><a href="pages/tools.html">Tools</a></li>
+    <li><a href="pages/projects.html">Projects</a></li>
+    <li><a href="pages/resources.html" class="ncta">Resources</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hbg">
+    <div class="hgrid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <div class="hcont">
+    <div class="hbadge">✦ Complete Developer Roadmap 2024</div>
+
+    <h1 class="htitle">
+      <span class="l1">Master Modern</span>
+      <span class="l2">Development</span>
+      <span class="l3">Web &amp; App Engineering Roadmap</span>
+    </h1>
+
+    <p class="hdesc">
+      Your complete, structured path from beginner to production-ready developer.
+      Explore frontend, backend, DevOps, mobile, and everything in between.
+    </p>
+
+    <div class="hbtns">
+      <a href="pages/frontend.html" class="btn-p">
+        Start Learning
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="pages/projects.html" class="btn-s">View Projects</a>
+    </div>
+
+    <div class="hstats">
+      <div class="sc">
+        <span class="sn" data-count="8" data-suf="+">0+</span>
+        <span class="sl">Learning Paths</span>
+      </div>
+      <div class="sc">
+        <span class="sn" data-count="120" data-suf="+">0+</span>
+        <span class="sl">Topics Covered</span>
+      </div>
+      <div class="sc">
+        <span class="sn" data-count="50" data-suf="+">0+</span>
+        <span class="sl">Project Ideas</span>
+      </div>
+      <div class="sc">
+        <span class="sn" data-count="200" data-suf="+">0+</span>
+        <span class="sl">Free Resources</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq">
+  <div class="mq-track">
+    <div class="mq-item"><em>⚛️</em> React</div>
+    <div class="mq-item"><em>🟨</em> JavaScript</div>
+    <div class="mq-item"><em>🐍</em> Python</div>
+    <div class="mq-item"><em>☕</em> Node.js</div>
+    <div class="mq-item"><em>🐋</em> Docker</div>
+    <div class="mq-item"><em>☁️</em> AWS</div>
+    <div class="mq-item"><em>🛢️</em> MongoDB</div>
+    <div class="mq-item"><em>🔷</em> TypeScript</div>
+    <div class="mq-item"><em>🌿</em> Vue.js</div>
+    <div class="mq-item"><em>🔧</em> Git</div>
+    <div class="mq-item"><em>📱</em> React Native</div>
+    <div class="mq-item"><em>🎨</em> CSS3</div>
+    <!-- duplicate for seamless loop -->
+    <div class="mq-item"><em>⚛️</em> React</div>
+    <div class="mq-item"><em>🟨</em> JavaScript</div>
+    <div class="mq-item"><em>🐍</em> Python</div>
+    <div class="mq-item"><em>☕</em> Node.js</div>
+    <div class="mq-item"><em>🐋</em> Docker</div>
+    <div class="mq-item"><em>☁️</em> AWS</div>
+    <div class="mq-item"><em>🛢️</em> MongoDB</div>
+    <div class="mq-item"><em>🔷</em> TypeScript</div>
+    <div class="mq-item"><em>🌿</em> Vue.js</div>
+    <div class="mq-item"><em>🔧</em> Git</div>
+    <div class="mq-item"><em>📱</em> React Native</div>
+    <div class="mq-item"><em>🎨</em> CSS3</div>
+  </div>
+</div>
+
+<!-- WHY DEVPATH -->
+<section class="section">
+  <div class="container">
+    <div class="sh aos">
+      <span class="stag">Why DevPath</span>
+      <h2 class="stitle">Everything to <span>Level Up</span></h2>
+      <p class="ssubt">Structured, comprehensive, and up-to-date paths for modern developers — built for college and beyond.</p>
+    </div>
+
+    <div class="feat-grid aos">
+      <div class="feat-item">
+        <span class="feat-num">01</span>
+        <div class="feat-title">Structured Roadmaps</div>
+        <p class="feat-desc">Step-by-step paths built by engineers. Clear direction from zero to job-ready — no guesswork.</p>
+      </div>
+      <div class="feat-item">
+        <span class="feat-num">02</span>
+        <div class="feat-title">Hands-On Projects</div>
+        <p class="feat-desc">Real project ideas for every level. Build a portfolio that actually impresses recruiters.</p>
+      </div>
+      <div class="feat-item">
+        <span class="feat-num">03</span>
+        <div class="feat-title">Curated Resources</div>
+        <p class="feat-desc">Handpicked tutorials, docs, and free tools. We filter the noise so you can focus on learning.</p>
+      </div>
+      <div class="feat-item">
+        <span class="feat-num">04</span>
+        <div class="feat-title">Tech Stack Guidance</div>
+        <p class="feat-desc">Understand why tools exist, not just how to use them. Make better architecture decisions.</p>
+      </div>
+      <div class="feat-item">
+        <span class="feat-num">05</span>
+        <div class="feat-title">Interview Prep</div>
+        <p class="feat-desc">DSA, system design, and behavioural prep across every track. Land your dream role.</p>
+      </div>
+      <div class="feat-item">
+        <span class="feat-num">06</span>
+        <div class="feat-title">Always Updated</div>
+        <p class="feat-desc">The tech world moves fast. Roadmaps are reviewed regularly to reflect current standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNING PATHS -->
+<section class="section" style="background:var(--bg2);border-top:1px solid var(--b1);border-bottom:1px solid var(--b1)">
+  <div class="container">
+    <div class="sh aos">
+      <span class="stag">Learning Paths</span>
+      <h2 class="stitle">Choose Your <span>Roadmap</span></h2>
+      <p class="ssubt">8 complete paths covering the full spectrum of web and app development.</p>
+    </div>
+
+    <div class="paths-g">
+      <a href="pages/frontend.html" class="pc aos d1" style="--pc-accent:var(--cyan)">
+        <span class="pc-icon">🎨</span>
+        <div class="pc-name">Frontend Dev</div>
+        <p class="pc-desc">HTML, CSS, JS, React, Vue, animations and performance.</p>
+        <div class="pc-meta">24 topics <span class="pc-arrow">→</span></div>
+      </a>
+      <a href="pages/backend.html" class="pc aos d2" style="--pc-accent:var(--green)">
+        <span class="pc-icon">⚙️</span>
+        <div class="pc-name">Backend Dev</div>
+        <p class="pc-desc">Node.js, APIs, auth, servers and microservices.</p>
+        <div class="pc-meta">22 topics <span class="pc-arrow">→</span></div>
+      </a>
+      <a href="pages/database.html" class="pc aos d3" style="--pc-accent:var(--purple)">
+        <span class="pc-icon">🛢️</span>
+        <div class="pc-name">Database & SQL</div>
+        <p class="pc-desc">SQL, NoSQL, MongoDB, PostgreSQL, Redis and ORMs.</p>
+        <div class="pc-meta">18 topics <span class="pc-arrow">→</span></div>
+      </a>
+      <a href="pages/devops.html" class="pc aos d4" style="--pc-accent:var(--orange)">
+        <span class="pc-icon">🐋</span>
+        <div class="pc-name">DevOps & Cloud</div>
+        <p class="pc-desc">Docker, Kubernetes, CI/CD, AWS and deployment.</p>
+        <div class="pc-meta">20 topics <span class="pc-arrow">→</span></div>
+      </a>
+      <a href="pages/mobile.html" class="pc aos d1" style="--pc-accent:var(--pink)">
+        <span class="pc-icon">📱</span>
+        <div class="pc-name">Mobile Dev</div>
+        <p class="pc-desc">React Native, Flutter, iOS, Android and deployment.</p>
+        <div class="pc-meta">16 topics <span class="pc-arrow">→</span></div>
+      </a>
+      <a href="pages/tools.html" class="pc aos d2" style="--pc-accent:var(--cyan)">
+        <span class="pc-icon">🛠️</span>
+        <div class="pc-name">Tools & IDEs</div>
+        <p class="pc-desc">Git, VS Code, Postman, Figma and the dev toolkit.</p>
+        <div class="pc-meta">14 topics <span class="pc-arrow">→</span></div>
+      </a>
+      <a href="pages/projects.html" class="pc aos d3" style="--pc-accent:var(--green)">
+        <span class="pc-icon">🚀</span>
+        <div class="pc-name">Project Ideas</div>
+        <p class="pc-desc">50+ project ideas from beginner to advanced.</p>
+        <div class="pc-meta">50+ projects <span class="pc-arrow">→</span></div>
+      </a>
+      <a href="pages/resources.html" class="pc aos d4" style="--pc-accent:var(--purple)">
+        <span class="pc-icon">📚</span>
+        <div class="pc-name">Resources</div>
+        <p class="pc-desc">Best free courses, docs, channels and communities.</p>
+        <div class="pc-meta">200+ links <span class="pc-arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="cta-glow"></div>
+  <div class="container" style="position:relative;z-index:2">
+    <div class="aos">
+      <span class="stag">Get Started</span>
+      <div class="cta-title">
+        Ready to Build<br>
+        <span class="grad-text">Something Great?</span>
+      </div>
+      <p style="color:var(--t2);max-width:440px;margin:0 auto 2rem;font-size:1rem;line-height:1.8">
+        Start with any path. Learn at your own pace. Build real projects. Get hired.
+      </p>
+      <a href="pages/frontend.html" class="btn-p" style="font-size:.95rem;padding:15px 36px">
+        Begin Your Journey
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:.8rem">
+          <div class="logo-dot"></div> DevPath
+        </a>
+        <p>A free, comprehensive web &amp; app development roadmap built for computer engineering students.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Paths</h4>
+        <ul>
+          <li><a href="pages/frontend.html">Frontend</a></li>
+          <li><a href="pages/backend.html">Backend</a></li>
+          <li><a href="pages/database.html">Database</a></li>
+          <li><a href="pages/devops.html">DevOps</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="pages/mobile.html">Mobile</a></li>
+          <li><a href="pages/tools.html">Tools</a></li>
+          <li><a href="pages/projects.html">Projects</a></li>
+          <li><a href="pages/resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Built With</h4>
+        <ul>
+          <li><a href="#">HTML5</a></li>
+          <li><a href="#">CSS3</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">No Frameworks</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-main-btm">
+      <p>© 2024 DevPath &mdash; CE College Project</p>
+      <p>Static Site &middot; HTML &middot; CSS &middot; JavaScript</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
